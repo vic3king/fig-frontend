@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Home from "./Pages/Home";
+import Notifications from "react-notify-toast";
+import "./App.css";
+
+const Error = () => <span>404</span>;
+
+const About = () => (
+  <React.Fragment>
+    <span>About</span>
+  </React.Fragment>
+);
+
+const App = () => (
+  <MemoryRouter>
+    <Routes>
+      <Route path="/about" exact element={<About />} />
+      <Route path="/" exact element={<Home />} />
+      <Route path="*" component={Error} />
+    </Routes>
+  </MemoryRouter>
+);
 
 export default App;
