@@ -16,7 +16,7 @@ const CardComponent = ({event}) => {
               Address: {event.address}
             </Card.Text>
             <Card.Text>
-              Category: {event.tags}
+              Category: {event.category}
             </Card.Text>
             <Button variant="primary">Attend</Button>
           </Card.Body>
