@@ -1,5 +1,5 @@
 const token = process.env.REACT_APP_TOKEN;
-const url = "https://21df-154-113-66-78.ngrok.io/api/v1";
+const url = "https://e54b-81-106-144-73.ngrok.io/api/v1";
 
 const recommendedEvents = () => {
   const fetchConfig = {

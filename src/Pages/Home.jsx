@@ -54,18 +54,18 @@ const HomePage = () => {
          Your recommended events <Badge pill bg="danger">Recommended</Badge>
         </h5>
         <Row>
-          {recommendedEventsStore.length && recommendedEventsStore.map((event) => {
+          {recommendedEventsStore.length ? recommendedEventsStore.map((event) => {
             return <Card event={event}/>;
-          })}
+          }) : 'LOADING...'}
         </Row>
       </Container>
       <br />
       <Container>
         <h1>Events</h1>
         <Row>
-          {eventsStore.length && eventsStore.map((event) => {
+          {eventsStore.length ? eventsStore.map((event) => {
              return <Card event={event} />;
-          })}
+          }) : 'LOADING....'}
         </Row>
       </Container>
     </React.Fragment>
